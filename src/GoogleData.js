@@ -29,6 +29,7 @@ export default class GoogleData {
       });
     });
   }
+
   static async mur() {
     return new Promise((resolve) => {
       gapi.load('client', async () => {
