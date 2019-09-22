@@ -7,7 +7,7 @@ createCouloirs(couloirs, height) {
   return couloirs
     .reduce((acc, coord, index) => {
       if(!acc[0]) {
-        acc.push([,coord]);
+        acc.push([0, coord]);
         return acc;
       }
 

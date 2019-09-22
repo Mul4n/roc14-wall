@@ -2,6 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
+  mode: 'development',
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -23,5 +25,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'index.html'
     })
-  ]
+  ],
+  optimization: {
+		// We no not want to minimize our code.
+		minimize: false
+	}
 };
